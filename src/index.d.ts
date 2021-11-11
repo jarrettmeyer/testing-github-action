@@ -9,3 +9,6 @@ interface AppendElementInput {
   textContent?: string;
 }
 
+interface UpdateElementInput {
+  inlineStyle?: InlineStyle;
+}

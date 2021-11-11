@@ -1,7 +1,7 @@
 /** @type {import("@jest/types").Config.InitialOptions} */
 const config = {
   collectCoverage: true,
-  collectCoverageFrom: ["src"],
+  collectCoverageFrom: ["src/**/*.js"],
   moduleFileExtensions: ["js"],
   testEnvironment: "jsdom",
   testRegex: ["\\.spec\\.js$"],

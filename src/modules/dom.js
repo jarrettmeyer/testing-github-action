@@ -36,3 +36,24 @@ export function appendElement(parent, childTag, opts = {}) {
   parent.appendChild(el);
   return el;
 }
+
+/**
+ * Update an element
+ *
+ * @param {HTMLElement} element element to be updated
+ * @param {UpdateElementInput} opts options
+ * @returns {HTMLElement} updated element
+ */
+export function updateElement(element, opts = {}) {
+  opts = opts || {};
+
+  if (typeof opts.inlineStyle === "object") {
+    const styles = Object.keys(opts.inlineStyle);
+    for (let i = 0; i < styles.length; i++) {
+      const style = styles[i];
+      const value = opts.inlineStyle[style];
+      element.style[style] = value;
+    }
+  }
+  return element;
+}
