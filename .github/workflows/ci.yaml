@@ -1,0 +1,17 @@
+name: continuous integration
+
+on: [push]
+
+jobs:
+  continuous_integration:
+    runs-on: ubuntu-latest
+    if: "!(contains(github.event.head_commit.message, '[no ci]'))"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test
