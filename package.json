@@ -1,0 +1,18 @@
+{
+  "name": "testing-github-action",
+  "version": "1.0.0",
+  "description": "Generate a test results site from unit tests",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:clearcache": "jest --clear-cache",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1"
+  }
+}
