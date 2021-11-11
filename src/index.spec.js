@@ -9,5 +9,5 @@ describe("testEnvironment", () => {
     const heading = document.body.querySelector("h1");
     expect(heading).toBeTruthy();
     expect(heading.textContent).toEqual("Hello, World!");
-  })
+  });
 });

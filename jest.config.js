@@ -4,7 +4,7 @@ const config = {
   collectCoverageFrom: ["src"],
   moduleFileExtensions: ["js"],
   testEnvironment: "jsdom",
-  testRegex: [/\.spec\.js/],
+  testRegex: ["\\.spec\\.js$"],
   transform: {
     "^.+\\.js$": "babel-jest",
   },

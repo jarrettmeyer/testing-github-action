@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["**/*.spec.js"],
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": ["jest.config.js"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
+}

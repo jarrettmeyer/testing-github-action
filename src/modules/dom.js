@@ -1,8 +1,10 @@
 /**
- * 
- * @param {HTMLElement} parent 
+ * Append an element to the DOM. This function does the work of `document.createElement()`
+ * and `parent.appendChild()` in a single function.
+ *
+ * @param {HTMLElement} parent
  * @param {string} childTag name of the tag for new element
- * @param {AppendElementInput} opts 
+ * @param {AppendElementInput} opts
  * @returns {HTMLElement} newly created element
  */
 export function appendElement(parent, childTag, opts = {}) {

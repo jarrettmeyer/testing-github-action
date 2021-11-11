@@ -1,0 +1,17 @@
+name: coverage
+
+on: push
+
+jobs:
+	coverage:
+    runs-on: ubuntu-latest
+    if: "!(contains(github.event.head_commit.message, '[no coverage]')"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Jest coverage
+        uses: mattallty/jest-github-action@v1.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
